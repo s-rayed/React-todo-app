@@ -20,7 +20,12 @@ export default class TodosListItem extends React.Component {
     }
 
     return (
-      <td style={taskStyle} >{this.props.task}</td>
+      <td 
+        style={taskStyle}
+        onClick={this.props.toggleTask.bind(this, task)}
+      >
+        {this.props.task}
+      </td>
     );
   }
 
